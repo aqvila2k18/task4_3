@@ -1,17 +1,17 @@
 #!/bin/bash
 if [ "$#" != 2 ]
 then
-echo 'incorrect parameters'
+echo 'incorrect parameters' >&2
 exit 1
 fi
 if ! [ -d $1 ]
 then
-echo 'incorrect parameters'
+echo 'incorrect parameters' >&2
 exit 1
 fi
 if ! [[ $2 =~ ^[0-9]+$ ]] 
 then
-echo 'incorrect parameters'
+echo 'incorrect parameters' >&2
 exit 1
 fi
 if ! [ -d /tmp/backups/ ]; then
